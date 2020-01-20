@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:padding="@dimen/widget_margin">
+
+    <ImageButton
+        android:id="@+id/bigIcon"
+        android:src="@mipmap/ic_launcher_big"
+        android:background="#00000000"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:contentDescription="@string/appwidget_text"
+        android:layout_width="320dp"
+        android:layout_height="320dp" />
+    <TextView
+        android:id="@+id/homeWidget_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="12dp"
+        android:contentDescription="@string/appwidget_text"
+        android:text="@string/appwidget_text"
+        android:textColor="#288"
+        android:textSize="48sp"
+        android:textStyle="bold|italic" />
+    <TextView
+        android:id="@+id/homeWidget_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/homeWidget_text"
+        android:layout_alignTop="@id/homeWidget_text"
+        android:layout_margin="2dp"
+        android:contentDescription="@string/appwidget_text"
+        android:text="@string/appwidget_text"
+        android:textColor="#3cf"
+        android:textSize="48sp"
+        android:textStyle="bold|italic" />
+    <TextView
+        android:id="@+id/homeWidget_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="30dp"
+        android:layout_alignStart="@id/bigIcon"
+        android:layout_below="@id/homeWidget_text2"
+        android:contentDescription="@string/appwidget_text"
+        android:text="@string/appwidget_text"
+        android:textColor="#000"
+        android:textSize="24sp" />
+</RelativeLayout>
