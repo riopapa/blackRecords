@@ -170,11 +170,6 @@ public class MainActivity extends Activity {
                 .build();
         utils.deleteOldLogs();
 
-
-
-//        mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
-
-//        PowerConnectionReceiver receiver = new PowerConnectionReceiver();
         IntentFilter iFilter = new IntentFilter();
         iFilter.addAction(Intent.ACTION_POWER_CONNECTED);
         iFilter.addAction(Intent.ACTION_BATTERY_CHANGED);
