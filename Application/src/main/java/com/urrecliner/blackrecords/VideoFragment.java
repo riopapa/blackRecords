@@ -395,7 +395,7 @@ public class VideoFragment extends Fragment
     }
 
     private void startBackgroundThread() {
-//        utils.log("1","startBackgroundThread");
+
         if (mBackgroundThread == null) {
             mBackgroundThread = new HandlerThread("CameraBackground");
             mBackgroundThread.start();
