@@ -73,12 +73,12 @@ public class Vars {
     static String eventFileName;
     static int activeEvent = 0;
 
-    // Recording will be aut start after DELAY_AUTO_RECORD when app is loaded
+    // Recording will be auto start after DELAY_AUTO_RECORD when app is loaded
     // when KeyDown press, it will wait one more KeyDown for exit app till DELAY_WAIT_EXIT
     // or app will be purged and restarted after DELAY_RESTART
-    final static int DELAY_AUTO_RECORD = 2;
+    final static int DELAY_AUTO_RECORD = 4;
     final static int DELAY_WAIT_EXIT = 10;
     final static int DELAY_RESTART = 60;
 
-    static com.urrecliner.blackrecords.AutoFitTextureView vTextureView;
+    static AutoFitTextureView vTextureView;
 }
