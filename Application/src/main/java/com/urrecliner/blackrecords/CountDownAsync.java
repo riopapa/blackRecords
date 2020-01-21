@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import static com.urrecliner.blackrecords.Vars.DELAY_RESTART;
 import static com.urrecliner.blackrecords.Vars.isRecordingNow;
+import static com.urrecliner.blackrecords.Vars.mActivity;
 import static com.urrecliner.blackrecords.Vars.mContext;
 import static com.urrecliner.blackrecords.Vars.utils;
 
@@ -54,14 +55,14 @@ class CountDownAsync extends AsyncTask<String, String, String> {
             mHandler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    utils.beepOnce(5,0.5f);
+                    utils.beepOnce(7,0.4f); // I will be back
                     utils.displayCount("I will be back in "+DELAY_RESTART+" secs.",Toast.LENGTH_LONG, Color.BLACK);
-                    utils.beepOnce(5,0.5f);
                 }
             }, 0);
             mHandler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
+                    mActivity.finish();
                     Intent restartIntent = mContext.getPackageManager()     // exit and reload app
                             .getLaunchIntentForPackage(mContext.getPackageName() );
                     PendingIntent intent = PendingIntent.getActivity(
@@ -71,7 +72,7 @@ class CountDownAsync extends AsyncTask<String, String, String> {
                     manager.set(AlarmManager.RTC, System.currentTimeMillis() + DELAY_RESTART*1000, intent);
                     System.exit(2);
                 }
-            }, 1000);
+            }, 2000);
 
         }
         else

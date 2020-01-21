@@ -239,7 +239,7 @@ public class VideoFragment extends Fragment
             public void run() {
                 autoHandler.sendEmptyMessage(0);
             }
-        }, 2000);
+        }, 3000);
     }
 
     final static Handler autoHandler = new Handler() {

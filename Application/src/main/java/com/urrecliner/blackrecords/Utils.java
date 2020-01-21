@@ -320,7 +320,8 @@ class Utils {
             R.raw.beep3_haze,                       //  event merge finished
             R.raw.beep4_recording,                  //  record button pressed
             R.raw.beep5_s_dew_drops,                //  normal merge finished
-            R.raw.beep6_stoprecording               // stop recording
+            R.raw.beep6_stoprecording,              // stop recording
+            R.raw.i_will_be_back
             };
     private int[] soundNbr = {0,0,0,0,0,0,0,0,0,0};
 
